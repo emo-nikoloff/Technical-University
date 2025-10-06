@@ -1,0 +1,10 @@
+"""Въвеждаме цяло 4-цифрено число, след това намираме сумата от цифрите на числото и я принтираме."""
+number = int(input("Четирицифрено число: "))
+fourthDigit = (number % 10)
+firstNewNumber = (number // 10)
+thirdDigit = (firstNewNumber % 10)
+secondNewNumber = (firstNewNumber // 10)
+secondDigit = (secondNewNumber % 10)
+thirdNewNumber = (secondNewNumber // 10)
+firstDigit = (thirdNewNumber % 10)
+print(f"Сборът от цифрите на числото {number} е: {firstDigit} + {secondDigit} + {thirdDigit} + {fourthDigit} = {firstDigit + secondDigit + thirdDigit + fourthDigit}")
