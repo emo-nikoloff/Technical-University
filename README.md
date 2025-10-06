@@ -1,2 +1,2 @@
 # Technical University
-My projects given from Technical Universiti throughout the years
+My projects given from Technical University throughout the years
