@@ -1,15 +1,12 @@
 import java.util.Scanner;
 
-public class BMICalculator
-{
-    public static void main(String[] args) throws Exception
-    {
+public class BMICalculator {
+    public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
 
         printIntroduction();
 
-        for (int i = 1; i <= 1; i++)
-        {
+        for (int i = 1; i <= 1; i++) {
             double bmi = getBMI(input);
             String status = getStatus(bmi);
             reportResults(i, bmi, status);
@@ -18,13 +15,11 @@ public class BMICalculator
         input.close();
     }
 
-    static void printIntroduction()
-    {
+    static void printIntroduction() {
         System.out.println("This program calculates your Body Mass Index (BMI).");
     }
 
-    static double getBMI(Scanner input)
-    {
+    static double getBMI(Scanner input) {
         System.out.print("Enter your weight in kg: ");
         double weight = Integer.parseInt(input.nextLine());
         System.out.print("Enter your height in cm: ");
@@ -38,30 +33,23 @@ public class BMICalculator
         return BMI;
     }
 
-    static double bmiFor(double weight, double height)
-    {
+    static double bmiFor(double weight, double height) {
         return (weight * 703 / (height * height));
     }
 
-    static String getStatus(double bmi)
-    {
-        if (bmi <= 18.5)
-        {
+    static String getStatus(double bmi) {
+        if (bmi <= 18.5) {
             return "Underweight";
-        } else if (bmi <= 25)
-        {
+        } else if (bmi <= 25) {
             return "Normal";
-        } else if (bmi <= 30)
-        {
+        } else if (bmi <= 30) {
             return "Overweight";
-        } else
-        {
+        } else {
             return "Obese";
         }
     }
 
-    static void reportResults(int serialNumber, double bmiIndex, String status)
-    {
+    static void reportResults(int serialNumber, double bmiIndex, String status) {
         double roundedBmi = Math.round(bmiIndex * 100.0) / 100.0;
         System.out.println("Person №" + serialNumber + " has BMI = " + roundedBmi + " -> " + status);
     }
