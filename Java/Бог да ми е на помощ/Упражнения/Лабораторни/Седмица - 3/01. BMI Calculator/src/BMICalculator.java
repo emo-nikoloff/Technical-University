@@ -2,53 +2,55 @@ import java.util.Scanner;
 
 public class BMICalculator {
     public static void main(String[] args) throws Exception {
+        Scanner input = new Scanner(System.in);
+
         printIntroduction();
 
         for (int i = 1; i <= 1; i++) {
-            getBMI();
+            double bmi = getBMI(input);
+            String status = getStatus(bmi);
+            reportResults(i, bmi, status);
         }
+
+        input.close();
     }
 
     static void printIntroduction() {
         System.out.println("This program calculates your Body Mass Index (BMI).");
     }
 
-    static double getBMI() {
-        Scanner scanner = new Scanner(System.in);
+    static double getBMI(Scanner input) {
+        System.out.print("Enter your weight in kg: ");
+        double weight = Integer.parseInt(input.nextLine());
+        System.out.print("Enter your height in cm: ");
+        double height = Integer.parseInt(input.nextLine());
 
-        System.out.println("Enter your weight in lbs:");
-        int weight = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter your height in inch:");
-        int height = Integer.parseInt(scanner.nextLine());
+        double weightLb = weight * 2.2046;
+        double heightInch = height * 0.3937;
 
-        int weightInKg = (int) (weight / 2.2046);
-        int heightInCentimeters = (int) (height * 0.3937);
-
-        double BMI = bmiFor(weightInKg, heightInCentimeters);
-
-        getStatus(BMI);
+        double BMI = bmiFor(weightLb, heightInch);
 
         return BMI;
     }
 
-    static double bmiFor(int weightInKg, int heightInCentimeters) {
-        return (weightInKg * 703 / (heightInCentimeters * heightInCentimeters));
+    static double bmiFor(double weight, double height) {
+        return (weight * 703 / (height * height));
     }
 
     static String getStatus(double bmi) {
-        if (bmi < 18.5) {
+        if (bmi <= 18.5) {
             return "Underweight";
-        } else if (bmi < 25) {
+        } else if (bmi <= 25) {
             return "Normal";
-        } else if (bmi < 30) {
+        } else if (bmi <= 30) {
             return "Overweight";
-        } else if (bmi > 30) {
+        } else {
             return "Obese";
         }
-        return "";
     }
 
-    static void reportResults(int serialNumber, double index, String string) {
-        System.out.println(serialNumber + ". BMI: " + index + " (" + string + ")");
+    static void reportResults(int serialNumber, double bmiIndex, String status) {
+        double roundedBmi = Math.round(bmiIndex * 100.0) / 100.0;
+        System.out.println("Person №" + serialNumber + " has BMI = " + roundedBmi + " -> " + status);
     }
 }
