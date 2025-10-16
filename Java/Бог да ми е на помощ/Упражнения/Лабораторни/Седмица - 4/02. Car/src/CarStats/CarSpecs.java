@@ -1,8 +1,5 @@
 package CarStats;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CarSpecs {
     private String Brand;
     private String Model;
