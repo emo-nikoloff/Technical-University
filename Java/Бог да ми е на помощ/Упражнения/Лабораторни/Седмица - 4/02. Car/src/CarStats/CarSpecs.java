@@ -1,5 +1,7 @@
 package CarStats;
 
+import java.util.Arrays;
+
 public class CarSpecs {
     private String Brand;
     private String Model;
@@ -104,5 +106,15 @@ public class CarSpecs {
         }
 
         return filtered;
+    }
+
+    public CarSpecs[] sortCars(CarSpecs[] cars, String order) {
+        if (order == "ascending") {
+            Arrays.sort(cars, (car1, car2) -> car1.getBrand().compareToIgnoreCase(car2.getBrand()));
+        } else if (order == "descending") {
+            Arrays.sort(cars, (car1, car2) -> car2.getBrand().compareToIgnoreCase(car1.getBrand()));
+            Arrays.sort(null, null);
+        }
+        return cars;
     }
 }
