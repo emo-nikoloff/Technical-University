@@ -1,7 +1,7 @@
 import AuthorBook.Book;
 import AuthorBook.Library;
 
-public class Main {
+public class Action {
     public static void main(String[] args) throws Exception {
         Library library = new Library(5);
 
