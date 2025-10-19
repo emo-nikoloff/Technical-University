@@ -15,13 +15,25 @@ public class Main {
 
         library.listBooks();
 
-        System.out.println("Търсене на книга '1984':");
-        Book found = library.searchByTitle("1984");
-        if (found != null) {
-            found.displayInfo();
+        System.out.println("\nТърсене на книга '1984':");
+        Book bookToBorrow = library.searchByTitle("1984");
+        if (bookToBorrow != null) {
+            bookToBorrow.displayInfo();
         }
 
         library.borrowBook("1984");
+
+        System.out.println();
+
+        library.listBooks();
+
+        System.out.println("\nТърсене на книга '1984':");
+        Book bookToReturn = library.searchByTitle("1984");
+        if (bookToReturn != null) {
+            bookToReturn.displayInfo();
+        }
+
+        library.returnBook("1984");
 
         System.out.println();
 

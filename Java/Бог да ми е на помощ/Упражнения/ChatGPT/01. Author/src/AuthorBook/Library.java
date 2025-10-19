@@ -26,7 +26,7 @@ public class Library {
     }
 
     public Book searchByTitle(String title) {
-        for (int i = 0; i < Books.length; i++) {
+        for (int i = 0; i < Count; i++) {
             Book book = Books[i];
             String bookTitle = book.getTitle();
 
@@ -46,6 +46,21 @@ public class Library {
                 System.out.println("Вие заехте книгата: " + title);
             } else {
                 System.out.println("Книгата вече е заета.");
+            }
+        } else {
+            System.out.println("Няма такава книга.");
+        }
+    }
+
+    public void returnBook(String title) {
+        Book book = searchByTitle(title);
+
+        if (book != null) {
+            if (!book.isAvailable()) {
+                book.setAvailability(true);
+                System.out.println("Вие върнахте книгата: " + title);
+            } else {
+                System.out.println("Тази книга не е била заета.");
             }
         } else {
             System.out.println("Няма такава книга.");
