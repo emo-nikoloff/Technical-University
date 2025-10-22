@@ -1,7 +1,7 @@
 import CompanyParts.Department;
 import CompanyParts.Employee;
 
-public class WorkField {
+public class Field {
     public static void main(String[] args) throws Exception {
         Department department1 = new Department("Дръж Ми Шапката ЕООД", 5);
         Department department2 = new Department("Клуб Уинкс ЕООД", 5);
