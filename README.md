@@ -9,7 +9,7 @@ The repository is organized into folders by programming language:
 - `C/` - Projects written in **C**
 - `Java/` - Projects written in **Java**
 
-### Notes
+## Notes
 - **Python** - first year, first semester
 - **C** - first year, second semester
 - **Java** - second year, first semester
