@@ -1,2 +1,2 @@
 # Technical University
-My projects given from Technical University throughout the years
+This repository contains a collection of programming exercises and assignments provided by the Technical University. The exercises cover various topics and programming languages, designed to help students improve their problem-solving and coding skills.
