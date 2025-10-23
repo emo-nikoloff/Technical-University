@@ -1,2 +1,2 @@
 # Java
-My projects from the second year, first semester in Technical University
+My solutions to the tasks from the second year, first semester in **Technical University**
