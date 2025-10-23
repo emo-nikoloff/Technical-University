@@ -38,11 +38,13 @@ public class Employee {
         return baseSalary;
     }
 
-    public void calculateSalary() {
-
+    public double calculateSalary() {
+        return baseSalary;
     }
 
     public void displayInfo() {
-
+        System.out.printf("--- %s ---%n", name);
+        System.out.printf("ИД: %d%n", id);
+        System.out.printf("Заплата: %.2fлв.%n", baseSalary);
     }
 }
