@@ -1,2 +1,2 @@
 # C
-My personal projects from the second semester in Technical University
+My projects from the first year, second semester in Technical University
