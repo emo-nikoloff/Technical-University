@@ -1,6 +1,5 @@
 # Technical University
-
-This repository contains my personal solutions to the programming exercises and assignments provided by the **Technical University**.
+This repository contains my solutions to the programming exercises and assignments provided by the **Technical University**.
 
 ## Repository Structure
 The repository is organized into folders by programming language:
