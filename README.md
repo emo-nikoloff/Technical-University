@@ -1,6 +1,6 @@
 # Technical University
 
-This repository contains a collection of programming exercises and assignments provided by the **Technical University**. The exercises cover various topics and programming languages, designed to help students improve their problem-solving and coding skills.
+This repository contains my personal solutions to the programming exercises and assignments provided by the **Technical University**.
 
 ## Repository Structure
 The repository is organized into folders by programming language:
