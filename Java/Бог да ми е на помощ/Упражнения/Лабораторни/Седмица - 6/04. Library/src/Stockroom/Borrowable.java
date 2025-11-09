@@ -1,7 +1,7 @@
 package Stockroom;
 
 public interface Borrowable {
-    void borrowItem(Book book);
+    void borrowItem();
 
-    void returnItem(Book book);
+    void returnItem();
 }

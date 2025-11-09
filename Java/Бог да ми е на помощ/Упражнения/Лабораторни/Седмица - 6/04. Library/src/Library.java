@@ -14,7 +14,7 @@ public class Library {
         library.add(book);
     }
 
-    public void searchByAuthor(String author) {
+    public List<Book> searchByAuthor(String author) {
         List<Book> foundBooks = new ArrayList<>();
 
         System.out.printf("Автор: %s%n", author);
@@ -23,9 +23,11 @@ public class Library {
                 foundBooks.add(book);
             }
         }
+
+        return foundBooks;
     }
 
-    public void searchByGenre(String genre) {
+    public List<Book> searchByGenre(String genre) {
         List<Book> foundBooks = new ArrayList<>();
 
         System.out.printf("Жанр: %s%n", genre);
@@ -34,9 +36,40 @@ public class Library {
                 foundBooks.add(book);
             }
         }
+
+        return foundBooks;
     }
 
     public void borrowBook(String title) {
+        for (Book book : library) {
+            if (book.getTitle().equalsIgnoreCase(title) && book.isAvailable()) {
+                book.borrowItem();
+                return;
+            }
+        }
+        System.out.printf("Книгата \"%s\" не е намерена!%n", title);
+    }
 
+    public void returnBook(String title) {
+        for (Book book : library) {
+            if (book.getTitle().equalsIgnoreCase(title) && !book.isAvailable()) {
+                book.returnItem();
+                return;
+            }
+        }
+        System.out.printf("Книгата \"%s\" не е намерена!%n", title);
+    }
+
+    public void displayBooks() {
+        System.out.println("Списък с книгите:");
+        for (Book book : library) {
+            System.out.printf("-> %s - %s - %d - %s - ", book.getTitle(), book.getAuthor(), book.getYear(),
+                    book.getGenre());
+            if (book.isAvailable()) {
+                System.out.println("налична");
+            } else {
+                System.out.println("неналична");
+            }
+        }
     }
 }
