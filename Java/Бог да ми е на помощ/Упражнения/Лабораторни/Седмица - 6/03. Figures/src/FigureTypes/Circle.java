@@ -1,13 +1,19 @@
-package Sculpt;
+package FigureTypes;
+
+import Info.Drawable;
 
 public class Circle extends Figure implements Drawable {
     private double radius;
 
     public Circle(double radius) {
         if (radius <= 0) {
-            throw new IllegalArgumentException("Радиусът трябва да е положително число.");
+            throw new IllegalArgumentException("Радиусът трябва да е положителен!");
         }
         this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
     }
 
     @Override
@@ -22,7 +28,8 @@ public class Circle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.printf("Чертая Кръг с радиус %.2f. Площ: %.2f, Периметър: %.2f%n",
-                radius, calculateArea(), calculatePerimeter());
+        System.out.printf("Кръг с радиус: %.2f%n", radius);
+        System.out.printf("Лице: %.2f%n", calculateArea());
+        System.out.printf("Периметър: %.2f%n%n", calculatePerimeter());
     }
 }

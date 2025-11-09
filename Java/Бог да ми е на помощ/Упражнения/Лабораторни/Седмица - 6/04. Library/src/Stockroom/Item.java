@@ -1,9 +1,9 @@
-package Items;
+package Stockroom;
 
 public abstract class Item {
-    private String title;
-    private String author;
-    private int year;
+    protected String title;
+    protected String author;
+    protected int year;
 
     public Item(String title, String author, int year) {
         this.title = title;

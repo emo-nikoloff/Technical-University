@@ -1,4 +1,4 @@
-package Sculpt;
+package Info;
 
 public class ShapeDrawer {
     public void drawShape(Drawable shape) {

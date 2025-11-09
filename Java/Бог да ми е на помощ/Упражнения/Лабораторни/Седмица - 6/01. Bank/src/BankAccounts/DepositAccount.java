@@ -1,14 +1,12 @@
 package BankAccounts;
 
-public class DepositAccount extends Account {
+import Exceptions.InsufficientFundsException;
+
+public class DepositAccount extends Account implements Transfers {
     private int depositPeriod;
 
-    public DepositAccount(double balance, String iBAN, int depositPeriod) {
-        super(balance, iBAN);
-        this.depositPeriod = depositPeriod;
-    }
-
-    public void setDepositPeriod(int depositPeriod) {
+    public DepositAccount(String iban, double balance, int depositPeriod) {
+        super(iban, balance);
         this.depositPeriod = depositPeriod;
     }
 
@@ -17,13 +15,17 @@ public class DepositAccount extends Account {
     }
 
     @Override
-    public double calculateInterest() {
-        double interest = balance * 0.03 * (depositPeriod / 12.0);
+    public double calculateInterest(double annualInterestRate) {
+        double interest = balance * (annualInterestRate / 100.0) * (depositPeriod / 12.0);
         return interest;
     }
 
     @Override
-    public double transferMoney(double amount) {
-        return balance += amount;
+    public void transferMoney(Account target, double amount) throws InsufficientFundsException {
+        if (amount > balance) {
+            throw new InsufficientFundsException("Недостатъчна наличност, за да бъде извършено прехвърлянето!");
+        }
+        this.withdraw(amount);
+        target.deposit(amount);
     }
 }

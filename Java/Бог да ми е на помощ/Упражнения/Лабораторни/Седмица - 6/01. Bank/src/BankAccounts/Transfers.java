@@ -1,5 +1,7 @@
 package BankAccounts;
 
+import Exceptions.InsufficientFundsException;
+
 public interface Transfers {
-    double transferMoney(double amount) throws InsuffiecientFundsException;
+    void transferMoney(Account target, double amount) throws InsufficientFundsException;
 }

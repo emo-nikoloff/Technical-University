@@ -1,15 +1,13 @@
 package BankAccounts;
 
-public abstract class Account implements Transfers {
+import Exceptions.InsufficientFundsException;
+
+public abstract class Account {
+    protected String iban;
     protected double balance;
-    protected String IBAN;
 
-    public Account(double balance, String iBAN) {
-        this.balance = balance;
-        this.IBAN = iBAN;
-    }
-
-    public void setBalance(double balance) {
+    public Account(String iban, double balance) {
+        this.iban = iban;
         this.balance = balance;
     }
 
@@ -17,26 +15,28 @@ public abstract class Account implements Transfers {
         return balance;
     }
 
-    public void setIBAN(String iBAN) {
-        IBAN = iBAN;
+    public String getIban() {
+        return iban;
     }
 
-    public String getIBAN() {
-        return IBAN;
+    protected abstract double calculateInterest(double annualInterestRate);
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
     }
 
-    public abstract double calculateInterest();
-
-    public double deposit(double sum) {
-        return balance + sum;
-    }
-
-    public double withdraw(double sum) {
-        return balance - sum;
+    public void withdraw(double amount) throws InsufficientFundsException {
+        if (amount > balance) {
+            throw new InsufficientFundsException("Недостатъчна наличност, за да бъде извършено тегленето!");
+        }
+        balance -= amount;
     }
 
     public void printAccount() {
-        System.out.printf("IBAN: %s%n", IBAN);
-        System.out.printf("Баланс по сметката: %.2f", balance);
+        System.out.println("--Сметка--");
+        System.out.printf("-IBAN: %s%n", iban);
+        System.out.printf("-Баланс по сметката: %.2fлв.%n", balance);
     }
 }
