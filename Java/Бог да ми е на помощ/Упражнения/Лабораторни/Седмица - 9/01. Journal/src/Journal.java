@@ -11,5 +11,7 @@ public class Journal {
         for (var event : filteredEvents) {
             System.out.println(event);
         }
+
+        // print(filteredEvents);
     }
 }

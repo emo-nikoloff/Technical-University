@@ -1,10 +1,11 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EventLog {
 
-    private static class Event {
+    public static class Event {
         private LocalDate date;
         private String description;
 
@@ -30,18 +31,25 @@ public class EventLog {
         events.sort((a, b) -> a.getDate().compareTo(b.getDate()));
     }
 
-    public List<String> getEventsBetween(String start, String end) {
+    public List<Event> getEventsBetween(String start, String end) {
         LocalDate startDate = LocalDate.parse(start);
         LocalDate endDate = LocalDate.parse(end);
 
-        List<String> result = new ArrayList<>();
+        // List<String> result = new ArrayList<>();
 
-        for (Event e : events) {
-            if (!e.getDate().isBefore(startDate) && !e.getDate().isAfter(endDate)) {
-                result.add(e.getDate() + " - " + e.getDescription());
-            }
-        }
+        // for (Event e : events) {
+        // if (!e.getDate().isBefore(startDate) && !e.getDate().isAfter(endDate)) {
+        // result.add(e.getDate() + " - " + e.getDescription());
+        // }
+        // }
 
-        return result;
+        events.stream().filter((e) -> !e.getDate().isBefore(startDate) && !e.getDate().isAfter(endDate))
+                .collect(Collectors.toList());
+
+        return events;
+    }
+
+    public void print() {
+
     }
 }
