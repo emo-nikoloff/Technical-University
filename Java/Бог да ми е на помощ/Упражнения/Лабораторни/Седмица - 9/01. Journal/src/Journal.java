@@ -6,10 +6,10 @@ public class Journal {
         log.addEvent("2023-03-10", "Рожден ден");
         log.addEvent("2023-06-15", "Край на срока");
 
-        var result = log.getEventsBetween("2023-01-01", "2023-06-01");
+        var filteredEvents = log.getEventsBetween("2023-01-01", "2023-06-01");
 
-        for (var ev : result) {
-            System.out.println(ev);
+        for (var event : filteredEvents) {
+            System.out.println(event);
         }
     }
 }
