@@ -23,7 +23,7 @@ public class Analyze {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(";");
 
-                String name = parts[0];
+                // String name = parts[0];
                 int age = Integer.parseInt(parts[1]);
                 String city = parts[2];
 
