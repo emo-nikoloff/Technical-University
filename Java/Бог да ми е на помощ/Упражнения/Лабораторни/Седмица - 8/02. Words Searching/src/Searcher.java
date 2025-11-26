@@ -1,32 +1,22 @@
+import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Searcher {
     public static void main(String[] args) throws Exception {
-        File myObj = new File("words.txt");
+        File myFile = new File(
+                "C:\\Users\\Емо Николов\\Desktop\\Проекти\\От университета\\Java\\Бог да ми е на помощ\\Упражнения\\Лабораторни\\Седмица - 8\\02. Words Searching\\src\\data\\words.txt");
 
-        try (Scanner myReader = new Scanner(myObj)) {
-            System.out.println("Съдържание на файла:");
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                System.out.println(data);
-            }
-        } catch (FileNotFoundException error) {
-            System.out.println("An error occurred.");
-            error.printStackTrace();
-        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(myFile))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
 
-        try (Scanner myReader = new Scanner(myObj)) {
-            System.out.println("\nДуми започващи с 'app':");
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                if (data.matches("app\\w+")) {
-                    System.out.println(data);
+                if (line.matches("app\\w+")) {
+                    System.out.println(line);
                 }
             }
-        } catch (FileNotFoundException error) {
-            System.out.println("An error occurred.");
+        } catch (IOException error) {
             error.printStackTrace();
         }
     }
