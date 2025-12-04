@@ -1,3 +1,10 @@
+/*Имплементирайте клас EventLog, който управлява списък от събития в хронологичен ред. Всеки елемент в списъка трябва да съдържа времева марка и описание на събитието. Добавете методи за
+добавяне на събития и извличане на събития в даден времеви интервал.
+Пример:
+var log = new EventLog();
+log.addEvent("2023-01-01", "Нова година");
+log.getEventsBetween("2023-01-01", "2023-06-01");*/
+
 public class Journal {
     public static void main(String[] args) throws Exception {
         var log = new EventLog();

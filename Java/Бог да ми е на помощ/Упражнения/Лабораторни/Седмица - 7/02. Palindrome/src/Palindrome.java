@@ -1,3 +1,5 @@
+/*Напишете програма, която проверява дали въведена дума е палиндром*/
+
 import java.util.Scanner;
 
 public class Palindrome {

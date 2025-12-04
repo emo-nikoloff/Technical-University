@@ -1,3 +1,6 @@
+/*Напишете програма, която чете n реда стрингове и извлича името и възрастта на дадено лице. Името на човека ще бъде между „@“ и „|“. Възрастта на човека ще бъде между „#“ и „*“.
+Пример: „Hello my name is @Peter| and I am #20* years old.“ За всяко намерено име и възраст, отпечатайте ред във формат „{name} is {age} years old.“*/
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,3 +1,5 @@
+/*Напишете програма, която заменя всички цифри със символ * в изречение.*/
+
 import java.util.Scanner;
 
 public class DigitsReplacing {

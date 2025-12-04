@@ -1,3 +1,7 @@
+/*Цел: Напишете програма, която чете CSV файл и анализира данните в него.
+Вход: CSV файл с данни.
+Изход: Анализирани и обработени данни от файла.*/
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

@@ -11,7 +11,7 @@ public class CarSpecs {
     private String Gearbox;
     private int Year;
 
-    CarSpecs() {
+    public CarSpecs() {
     }
 
     public CarSpecs(String brand, String model, String colour, int horsePower, String engine, String gearbox,
@@ -109,12 +109,64 @@ public class CarSpecs {
     }
 
     public CarSpecs[] sortCars(CarSpecs[] cars, String order) {
-        if (order == "ascending") {
-            Arrays.sort(cars, (car1, car2) -> car1.getBrand().compareToIgnoreCase(car2.getBrand()));
-        } else if (order == "descending") {
-            Arrays.sort(cars, (car1, car2) -> car2.getBrand().compareToIgnoreCase(car1.getBrand()));
-            Arrays.sort(null, null);
+        CarSpecs[] sorted = cars.clone();
+
+        if (order.equalsIgnoreCase("ascending")) {
+            Arrays.sort(sorted, (car1, car2) -> car1.getBrand().compareToIgnoreCase(car2.getBrand()));
+        } else if (order.equalsIgnoreCase("descending")) {
+            Arrays.sort(sorted, (car1, car2) -> car2.getBrand().compareToIgnoreCase(car1.getBrand()));
         }
-        return cars;
+
+        return sorted;
+    }
+
+    private boolean areCarsEqual(CarSpecs c1, CarSpecs c2) {
+        return c1.getBrand().equals(c2.getBrand()) &&
+                c1.getModel().equals(c2.getModel()) &&
+                c1.getColour().equals(c2.getColour()) &&
+                c1.getPower() == c2.getPower() &&
+                c1.getEngine().equals(c2.getEngine()) &&
+                c1.getGearbox().equals(c2.getGearbox()) &&
+                c1.getYear() == c2.getYear();
+    }
+
+    public CarSpecs[] removeDuplicates(CarSpecs[] cars) {
+        int uniqueCount = 0;
+
+        for (int i = 0; i < cars.length; i++) {
+            boolean duplicate = false;
+
+            for (int j = 0; j < i; j++) {
+                if (areCarsEqual(cars[i], cars[j])) {
+                    duplicate = true;
+                    break;
+                }
+            }
+
+            if (!duplicate) {
+                uniqueCount++;
+            }
+        }
+
+        CarSpecs[] removed = new CarSpecs[uniqueCount];
+        int index = 0;
+
+        for (int i = 0; i < cars.length; i++) {
+            boolean duplicate = false;
+
+            for (int j = 0; j < i; j++) {
+                if (areCarsEqual(cars[i], cars[j])) {
+                    duplicate = true;
+                    break;
+                }
+            }
+
+            if (!duplicate) {
+                removed[index] = cars[i];
+                index++;
+            }
+        }
+
+        return removed;
     }
 }

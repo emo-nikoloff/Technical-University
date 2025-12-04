@@ -1,3 +1,5 @@
+/*Напишете програма, която проверява дали въведеният телефонен номер е валиден. Валиден номер: съдържа точно 10 цифри и започва с 08.*/
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;

@@ -1,3 +1,11 @@
+/*Създайте клас Car с полета brand, speed, fuel и mileage. Добавете методи accelerate(), refuel() и drive(int distance). Методът drive трябва да увеличава изминатите километри (mileage) и да
+намалява горивото (fuel).
+Създайте клас ElectricCar, който наследява Car и добавя полета batteryLevel и efficiency (коефициент на ефективност). Добавете метод charge(), който зарежда батерията, и
+driveElectric(int distance), който използва батерията вместо гориво при шофиране. Методът трябва да взема предвид ефективността на колата.
+Създайте клас Main, в който създавате и манипулирате обекти от горните класове. Демонстрирайте полиморфизъм чрез масив от Car обекти, които могат да бъдат както стандартни коли, така и
+електрически. Използвайте цикъл, за да извикате метода drive или driveElectric на всяка кола в масива, като проверите типа на колата преди това (използвайте instanceof).
+*/
+
 import Drive.Car;
 import Drive.ElectricCar;
 
@@ -22,7 +30,6 @@ public class Road {
         cars[1] = new ElectricCar("Tesla", 0, 80, 2.5);
         cars[2] = new ElectricCar("Nissan Leaf", 0, 50, 2.0);
 
-        // Полиморфизъм: обхождаме всички коли и извикваме подходящия метод
         for (Car vehicle : cars) {
             if (vehicle instanceof ElectricCar) {
                 ElectricCar eCar = (ElectricCar) vehicle;

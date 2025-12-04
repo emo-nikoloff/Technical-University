@@ -1,3 +1,5 @@
+/*Напишете прграма, която заменя всички главни букви с малки, а всички интервали – с долна черта _.*/
+
 import java.util.Scanner;
 
 public class StringReplace {
