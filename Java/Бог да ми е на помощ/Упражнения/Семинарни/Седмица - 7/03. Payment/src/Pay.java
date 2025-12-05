@@ -1,3 +1,8 @@
+/*Създайте абстрактен клас PaymentMethod с метод processPayment(). Имплементирайте класове CreditCard и PayPal, които го наследяват. Програмата да връща избрания метод за плащане.
+Обяснение:
+1. Абстрактен клас PaymentMethod - Дефинираме абстрактен клас PaymentMethod с метод processPayment(), който трябва да бъде имплементиран от всеки наследник.
+2. Имплементации CreditCard и PayPal - Създаваме класовете CreditCard и PayPal, които имплементират processPayment() с различни поведения за обработка на плащане.*/
+
 import PaymentTypes.CreditCard;
 import PaymentTypes.PayPal;
 import PaymentTypes.PaymentMethod;
