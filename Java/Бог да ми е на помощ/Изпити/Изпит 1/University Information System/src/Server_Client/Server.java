@@ -1,3 +1,4 @@
+package Server_Client;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,8 +17,6 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-import Server_Client.CredentialsException;
-import Server_Client.UserFactory;
 import UserSettings.User;
 import UserSettings.UserType;
 import UserSettings.Users.Admin;

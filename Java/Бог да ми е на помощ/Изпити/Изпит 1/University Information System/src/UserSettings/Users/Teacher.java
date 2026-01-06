@@ -1,4 +1,5 @@
 package UserSettings.Users;
+
 import UserSettings.User;
 import UserSettings.UserType;
 
