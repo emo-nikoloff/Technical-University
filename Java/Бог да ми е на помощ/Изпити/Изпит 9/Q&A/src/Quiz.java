@@ -21,6 +21,10 @@ public class Quiz implements Serializable {
         this.currentQuestion = 0;
     }
 
+    public Student getStudent() {
+        return student;
+    }
+
     @SuppressWarnings("unchecked")
     private List<Question> loadQuestions() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(QUESTIONS_FILENAME))) {
