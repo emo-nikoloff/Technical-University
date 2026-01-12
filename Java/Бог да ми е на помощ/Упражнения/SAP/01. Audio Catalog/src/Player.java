@@ -13,11 +13,6 @@
 •   Записване и четене на всички обекти от каталога във файл 
 •   Записване и четене на отделни playlist-и във файл*/
 
-import java.util.ArrayList;
-import java.util.List;
-
-import Items.*;
-
 public class Player {
     public static void main(String[] args) throws Exception {
 
