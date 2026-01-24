@@ -76,7 +76,7 @@ public class Server {
 
     public static List<Email> filterEmails(String sender, String subject) {
         List<Email> allEmails = Email.loadFromFile(subject);
-        return null;
+        return allEmails;
     }
 
     private void userMenu(Scanner sc, PrintStream out) {
