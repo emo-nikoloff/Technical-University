@@ -11,21 +11,21 @@ The repository is organized into folders by programming language:
 - 📘 Fundamentals of programming  
 - 🛠 Basic algorithms and problem solving  
 
----
+--
 
 ### ⚙️ C
 - 📅 First Year — Second Semester  
 - 📘 Memory management, structures, file operations  
 - 🛠 Low-level programming concepts  
 
----
+--
 
 ### ☕ Java
 - 📅 Second Year — First Semester  
 - 📘 Object-Oriented Programming (OOP)  
 - 🛠 Classes, objects, inheritance, and more
 
----
+--
 
 ## 🧠 Learning Progress
 
