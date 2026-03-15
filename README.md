@@ -27,6 +27,13 @@ The repository is organized into folders by programming language:
 
 ---
 
+### 🗄️ MySQL
+- 📅 Second Year — Ongoing
+- 📘 Database fundamentals
+- 🛠 Queries, joins, normalization, and relational design
+
+---
+
 ## 🧠 Learning Progress
 
 | Language | Year | Semester | Focus |
@@ -34,6 +41,7 @@ The repository is organized into folders by programming language:
 | Python | 1 | 1 | Programming Basics |
 | C | 1 | 2 | Memory & Low-Level Concepts |
 | Java | 2 | 1 | OOP |
+| MySQL | 2 | 2 | Databases & SQL |
 
 ---
 
