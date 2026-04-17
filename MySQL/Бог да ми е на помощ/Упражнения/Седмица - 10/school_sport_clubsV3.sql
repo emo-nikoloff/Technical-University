@@ -279,3 +279,8 @@ INSERT INTO `school_sport_clubs`.`coach_work` (`coach_id`, `group_id`, `number_o
 INSERT INTO `school_sport_clubs`.`coach_work` (`coach_id`, `group_id`, `number_of_hours`, `date`) VALUES ('2', '2', '2', '2021-04-11 08:45:55');
 INSERT INTO `school_sport_clubs`.`coach_work` (`coach_id`, `group_id`, `number_of_hours`, `date`) VALUES ('2', '3', '2', '2021-04-02 08:45:55');
 INSERT INTO `school_sport_clubs`.`coach_work` (`coach_id`, `group_id`, `number_of_hours`, `date`) VALUES ('2', '3', '2', '2021-04-09 08:45:55');
+
+INSERT INTO salaryPayments (coach_id, month, year, salaryAmount, dateOfPayment) VALUES (1, 3, 2021, 192, NOW());
+INSERT INTO salaryPayments (coach_id, month, year, salaryAmount, dateOfPayment) VALUES (1, 4, 2021, 96, NOW());
+INSERT INTO salaryPayments (coach_id, month, year, salaryAmount, dateOfPayment) VALUES (2, 3, 2021, 200, NOW());
+INSERT INTO salaryPayments (coach_id, month, year, salaryAmount, dateOfPayment) VALUES (2, 4, 2021, 200, NOW());
