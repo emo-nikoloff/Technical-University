@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS dealer_system;
 CREATE DATABASE dealer_system;
 USE dealer_system;
 
@@ -11,12 +12,19 @@ CREATE TABLE suppliers(
     phone VARCHAR(15)
 );
 
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
 CREATE TABLE products(
 	id int AUTO_INCREMENT PRIMARY KEY,
     supplier_id INT NOT NULL, FOREIGN KEY(supplier_id) REFERENCES suppliers(id),
+    category_id INT NOT NULL, FOREIGN KEY (category_id) REFERENCES categories(id),
 	name VARCHAR(150) NOT NULL,
     description text,
-    current_price DECIMAL(10, 2) NOT NULL
+    current_price DECIMAL(10, 2) NOT NULL,
+    stock_quantity INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE product_price_history(
