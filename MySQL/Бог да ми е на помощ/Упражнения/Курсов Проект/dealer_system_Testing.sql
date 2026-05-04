@@ -153,3 +153,11 @@ BEGIN
     LIMIT p_limit;
 END $
 DELIMITER ;
+
+-- Промяна на цена
+DELIMITER $
+CREATE PROCEDURE UpdateProductPrice(IN p_product_id INT, IN p_new_price DECIMAL(10,2 ))
+BEGIN
+	
+END $
+DELIMITER ;
