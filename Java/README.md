@@ -6,7 +6,7 @@ My solutions to the tasks from the second year, first semester in **Technical Un
 ## 📂 Folder Structure
 To keep the workspace clean and organized, the main directory is divided into two primary subfolders, which are further categorized into specific sub-directories:
 
-### 🙏 Бог да ми е на помощ = God Help Me  
+### 🙏 Бог да ми е на помощ = May God help me
 - This is the **main root directory**.  
 - It contains **all other folders** described below.
 
