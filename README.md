@@ -28,7 +28,7 @@ The repository is organized into folders by programming language:
 ---
 
 ### 🗄️ MySQL
-- 📅 Second Year — Ongoing
+- 📅 Second Year — Second Semester
 - 📘 Database fundamentals
 - 🛠 Queries, joins, normalization, and relational design
 
