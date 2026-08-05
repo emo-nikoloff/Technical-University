@@ -53,3 +53,6 @@ dkms.conf
 
 # Project-specific configuration files folder
 *.idea/
+
+# Windows folder customization files
+desktop.ini
