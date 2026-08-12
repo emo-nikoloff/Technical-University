@@ -1,5 +1,5 @@
 # 🐬 MySQL
-My solutions to the tasks from the second year, second semester in **Technical University**
+My solutions to the tasks from the second year, second semester in **Technical University - Sofia**
 
 ---
 

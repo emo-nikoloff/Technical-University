@@ -1,5 +1,5 @@
 # ⚙️ C
-My solutions to the tasks from the first year, second semester in **Technical University**
+My solutions to the tasks from the first year, second semester in **Technical University - Sofia**
 
 ---
 
@@ -17,4 +17,4 @@ To keep the workspace clean and organized, the main directory is divided into tw
 - Laboratory exercises are organized by **weeks** based on the semester schedule.
 
 #### Семинарни = Seminary
-- Seminary exercises are also organized by **weeks** following the course progression.
+- Seminary exercises are organized by **weeks** following the course progression.

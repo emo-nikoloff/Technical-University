@@ -46,8 +46,7 @@ The repository is organized into folders by programming language:
 ---
 
 ## 📌 Notes
-- All projects are part of university coursework.
-- Projects's descriptions are in **bulgarian**.
-- Each subfolder inside the main folders is in **bulgarian**.
-- Code quality improves across semesters as knowledge grows.
-- Repository will continue to expand with new technologies.
+- All projects are part of my university coursework.
+- Project descriptions are in **Bulgarian**.
+- Each subfolder inside the main folders is in **Bulgarian**.
+- The repository will continue to expand with new technologies.
