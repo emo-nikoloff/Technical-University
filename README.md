@@ -1,5 +1,5 @@
 # 🎓 Technical University
-This repository contains my solutions to the programming exercises and assignments provided by the **Technical University**.
+This repository contains my solutions to the programming exercises and assignments provided by **Technical University - Sofia**.
 
 ---
 
