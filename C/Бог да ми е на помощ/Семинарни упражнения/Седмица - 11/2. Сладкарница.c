@@ -14,13 +14,20 @@
 При всяко изпълнение на поръчка изписвайте: Client <address> ordered <product name>. Програмата приключва работа при въвеждане на команда END.*/
 #include <stdio.h>
 
-struct Product {
+struct Product
+{
     char productName[50];
     double productPrice;
     int productNumber;
 };
 
-struct Order {
+struct Order
+{
     char clientAddress[50];
     int productNumber;
 };
+
+int main(void)
+{
+    return 0;
+}

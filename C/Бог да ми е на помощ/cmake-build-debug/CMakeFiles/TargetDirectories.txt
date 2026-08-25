@@ -1,3 +1,0 @@
-C:/Users/Емо Николов/Desktop/Проекти/C/CLion/От университета/Бог да ми е на помощ/cmake-build-debug/CMakeFiles/7777.dir
-C:/Users/Емо Николов/Desktop/Проекти/C/CLion/От университета/Бог да ми е на помощ/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Емо Николов/Desktop/Проекти/C/CLion/От университета/Бог да ми е на помощ/cmake-build-debug/CMakeFiles/rebuild_cache.dir
