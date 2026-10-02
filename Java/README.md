@@ -13,9 +13,6 @@ To keep the workspace clean and organized, the main directory is divided into tw
 ---
 
 ### 🧩 Упражнения = Exercises
-#### Допълнителни = Additional
-- Additional exercises are organized according to their **source**.
-
 #### Лабораторни = Laboratory
 - Laboratory exercises are organized by **weeks** based on the semester schedule.
 
