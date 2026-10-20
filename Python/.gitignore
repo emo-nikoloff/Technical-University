@@ -182,6 +182,3 @@ cython_debug/
 
 # Project-specific configuration files folder
 *.idea/
-
-# Windows folder customization files
-desktop.ini
