@@ -1,36 +1,45 @@
 # 🎓 Technical University
-This repository contains my solutions to the programming exercises and assignments provided by **Technical University - Sofia**.
+
+This repository contains my solutions to the programming exercises and assignments provided by **Technical University of Sofia**.
 
 ---
 
 ## 📂 Repository Structure
+
 The repository is organized into folders by programming language:
 
 ### 🐍 Python
-- 📅 First Year — First Semester  
-- 📘 Fundamentals of programming  
-- 🛠 Basic algorithms and problem solving  
+- 📅 First Year - First Semester
+- 📘 Fundamentals of Programming
+- 🛠 Basic algorithms and problem solving
 
 ---
 
 ### ⚙️ C
-- 📅 First Year — Second Semester  
-- 📘 Memory management, structures, file operations  
-- 🛠 Low-level programming concepts  
+- 📅 First Year - Second Semester
+- 📘 Memory management, structures, file operations
+- 🛠 Low-level programming concepts
 
 ---
 
 ### ☕ Java
-- 📅 Second Year — First Semester  
-- 📘 Object-Oriented Programming (OOP)  
+- 📅 Second Year - First Semester
+- 📘 Object-Oriented Programming (OOP)
 - 🛠 Classes, objects, inheritance, and more
 
 ---
 
 ### 🗄️ MySQL
-- 📅 Second Year — Second Semester
+- 📅 Second Year - Second Semester
 - 📘 Database fundamentals
 - 🛠 Queries, joins, normalization, and relational design
+
+---
+
+### 💻 C++
+- 📅 Third Year - First Semester
+- 📘 Object-Oriented Programming (OOP) and object-oriented design
+- 🛠 Classes, inheritance, polymorphism, operator overloading, memory management, and advanced programming concepts
 
 ---
 
@@ -42,6 +51,7 @@ The repository is organized into folders by programming language:
 | C | 1 | 2 | Memory & Low-Level Concepts |
 | Java | 2 | 1 | OOP |
 | MySQL | 2 | 2 | Databases & SQL |
+| C++ | 3 | 1 | OOP & Memory Management |
 
 ---
 
