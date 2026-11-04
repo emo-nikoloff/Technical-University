@@ -1,5 +1,6 @@
 #include "StudentGrades.h"
 
+#include <iomanip>
 #include <stdexcept>
 
 const array<int, StudentGrades::SUBJECTS_COUNT> &StudentGrades::getFirstSemesterGrades() const
@@ -74,7 +75,8 @@ ostream &operator<<(ostream &out, const StudentGrades &student)
         out << grade << ' ';
     }
 
-    out << "\nAverage: " << student.getAverage() << '\n';
+    out << "\nAverage: " << fixed << setprecision(2)
+        << student.getAverage() << '\n';
 
     return out;
 }
