@@ -10,11 +10,11 @@ class Program
 {
     static readonly int maxTankCapacity = 2000;
     static int currentTankCapacity = 0;
-    static Mutex poolMutex = null!;
+    static Mutex tankMutex = null!;
 
     static void Main(string[] args)
     {
-        poolMutex = new();
+        tankMutex = new();
 
         Thread thread1 = new(() =>
             ThreadFunction(20, 10_000));
@@ -31,10 +31,10 @@ class Program
 
         while (true)
         {
-            if (poolMutex.WaitOne())
+            if (tankMutex.WaitOne())
             {
                 Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Tank Capacity: {currentTankCapacity}/{maxTankCapacity}");
-                poolMutex.ReleaseMutex();
+                tankMutex.ReleaseMutex();
             }
 
             Thread.Sleep(1000);
@@ -49,7 +49,7 @@ class Program
             Thread.Sleep(sleepTimeMilliseconds);
 
             bool operationFailed = false;
-            if (poolMutex.WaitOne())
+            if (tankMutex.WaitOne())
             {
                 int newCapacity = currentTankCapacity + updateVolume;
 
@@ -67,7 +67,7 @@ class Program
                         $"Tank: {currentTankCapacity}/{maxTankCapacity} L");
                 }
 
-                poolMutex.ReleaseMutex();
+                tankMutex.ReleaseMutex();
             }
 
             if (operationFailed)
